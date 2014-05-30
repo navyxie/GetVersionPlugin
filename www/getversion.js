@@ -1,6 +1,7 @@
+var noop = function(){};
 var getversion = {
     get:function(successCbf,errorCbf){
-        cordova.exec(successCbf, errorCbf,"GetVersionPlugin","get",[]);
+        cordova.exec(successCbf || noop, errorCbf || noop,"GetVersionPlugin","get",[]);
     }
 }
 module.exports = getversion;
